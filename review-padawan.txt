@@ -1,0 +1,19 @@
+1 - Review To Do List project /ok
+2 - Create new component for home page /ok
+3 - Add condition to enable button when the input length is more or equal than 5 /ok
+4 - Add an event (keyup.enter) in input and treat the same condition above in the typescript function
+5 - Add bootstrap 5 in the project /ok
+6 - Add fontawesome CDN in the project / ok
+7 - Add sweet alert 2 in the project and create the util service to provide confirm function
+8 - Create new component for tasklist and put there an input field for initial to do List
+
+If we have time and energy
+
+9 - Create an output field to send back the to do list to home component
+10 - Create service to provide to do list from database 
+
+
+Next steps
+
+1 - Store to do list in cookies
+2 - Store to do list in localstorage
