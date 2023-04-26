@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  taskListOfHome = ["Estudar", "correr", "andar", "cozinhar"]
+
 }
+

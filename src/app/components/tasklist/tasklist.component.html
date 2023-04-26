@@ -20,8 +20,8 @@
               <tr *ngFor="let t of taskList; let i = index">
                 <th scope="row">{{i+1}}</th>
                 <td>{{t}}</td>
-                <td> 
-                    <button class="btn btn-danger">
+                <td>
+                    <button (click)="deleteTask(i)" class="btn btn-danger">
                         <i class="fa fa-trash"></i>
                     </button>
                 </td>
