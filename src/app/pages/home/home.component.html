@@ -1,4 +1,6 @@
 <p>Home page works!</p>
 
 
-<app-tasklist [taskList]="taskListOfHome" ></app-tasklist>
+<app-tasklist [taskList]="taskListService.getList()"
+  (taskAdded)="onTaskAdded($event)"
+  (taskRemoved)="onTaskRemoved($event)"></app-tasklist>

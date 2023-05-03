@@ -10,8 +10,8 @@
 
 If we have time and energy
 
-9 - Create an output field to send back the to do list to home component /
-10 - Create service to provide to do list from database
+9 - Create an output field to send back the to do list to home component /ok
+10 - Create service to provide to do list from database /ok
 
 
 Next steps

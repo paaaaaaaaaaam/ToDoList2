@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { TasklistService } from 'src/app/services/tasklist.service';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -8,10 +9,18 @@ import Swal from 'sweetalert2';
 })
 export class TasklistComponent {
   task:string = "";
-  @Input() taskList:string[] = [];
+  @Input() taskList: string[] = [];
+  @Output() taskAdded: EventEmitter<string> = new EventEmitter();
+  @Output() taskRemoved: EventEmitter<number> = new EventEmitter();
+
+  constructor() {
+
+  }
 
   addTaskToList(){
-    this.taskList.push(this.task);
+
+    //Emitindo o valor da task para o output do componente
+    this.taskAdded.emit(this.task);
     this.task = "";
   }
 
@@ -26,7 +35,7 @@ export class TasklistComponent {
       confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
       if (result.isConfirmed) {
-        this.taskList.splice(i,1);
+        this.taskRemoved.emit(i);
       }
     })
   }
