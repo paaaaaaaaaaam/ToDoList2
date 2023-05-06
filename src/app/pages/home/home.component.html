@@ -1,6 +1,7 @@
 <h3 class="text-center">Minha lista de Tarefas</h3>
 
 
-<app-tasklist [taskList]="taskListService.getList()"
+<app-tasklist 
+  [taskList]="taskListService.taskList"
   (taskAdded)="onTaskAdded($event)"
   (taskRemoved)="onTaskRemoved($event)"></app-tasklist>

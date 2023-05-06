@@ -14,7 +14,7 @@ export class HomeComponent {
 
   onTaskAdded(task: string) {
 
-    // alert('Task recebida do componente: ' + task);
+    //alert('Task recebida do componente: ' + task);
     this.taskListService.addTask(task);
 
   }

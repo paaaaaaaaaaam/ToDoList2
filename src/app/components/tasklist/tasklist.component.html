@@ -1,13 +1,13 @@
 <div class="input-group mb-3">
 
-    <input [(ngModel)]="task" type="text" class="form-control" placeholder="Type your task here!" aria-describedby="button-addon2">
+    <input [(ngModel)]="task" type="text" class="form-control" placeholder="Type your task here!" aria-describedby="button-addon2" (keyup.enter)="addTaskToList()">
     <button (click)="addTaskToList()" class="btn btn-primary" [disabled]="task.length < 5" type="button" id="button-addon2">
         <i class="fa fa-plus"></i>
     </button>
   </div>
 
   <div class="row">
-    <div class="col-6 offset-3" >
+    <div class="col-md-6 offset-md-3" >
         <table class="table table-striped">
             <thead>
               <tr>

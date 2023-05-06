@@ -8,17 +8,21 @@ export class TasklistService {
   taskList: string[] = [];
 
   constructor() {
-    this.taskList = JSON.parse(localStorage.getItem("TaskListStorage") || '{}');
+    this.loadList();
   }
 
-  getList() {
+  loadList() {
 
-    return JSON.parse(localStorage.getItem("TaskListStorage") || '{}');
+    if (localStorage.getItem("TaskListStorage")) {
+      this.taskList = JSON.parse(localStorage.getItem("TaskListStorage") || '{}');
+    }
 
   }
 
   addTask(task: string) {
     this.taskList.push(task);
+    console.log(this.taskList);
+    
     this.atualizarStorage();
   }
 
